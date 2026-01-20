@@ -18,15 +18,18 @@ TYPE = "views"
 
 quantity_types = {
     'views' : 500,
-    'likes' : 20
+    'likes' : 20,
+    'followers' : 10
 }
 delay_types = {
     'views' : 5,
-    'likes':3
+    'likes':3,
+    'followers' : 2
 }
 service_id = {
     'views':237,
-    'likes':234
+    'likes':234,
+    'followers': 787
 }
 init(autoreset=True)
 
@@ -41,7 +44,7 @@ def check_version():
         sys.exit()
 
 def show_credits():
-    print(f"{Fore.BLUE}Developed by Sneezedip.")
+    print(f"{Fore.BLUE}Developed by SAFAR")
     print(f"{Fore.BLUE}https://discord.gg/nAa5PyxubF{Style.RESET_ALL}")
     time.sleep(1)
 
@@ -183,9 +186,9 @@ def main():
                 print(f"{Fore.RED}Invalid number!{Style.RESET_ALL}")
         elif choice == "4":
             if TYPE == 'views':
-                TYPE = 'likes'
+                TYPE = 'followers'
             else:
-                TYPE = 'views'
+                TYPE = 'followers'
             save_config()
         elif choice == "5":
             print("Exiting...")
